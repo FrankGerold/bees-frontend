@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {useDispatch} from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Actions from '../Redux/actions.js';
 
-const Signup = ({history}) => {
+const Signup = ({ history }) => {
 
   const dispatch = useDispatch();
 
-  const {signupForm, setSignupForm} = useState({
+  const [ signupForm, setSignupForm ] = useState({
     name: '',
     userName: '',
     password: '',
@@ -17,55 +17,63 @@ const Signup = ({history}) => {
   const handleChange = (typing) => {
     setSignupForm({
       ...signupForm,
-      typing.target.name: typing.target.value
+      [typing.target.name]: typing.target.value
     })
   };
 
   const handleSubmit = (form) => {
     form.preventDefault();
     dispatch(Actions.newUser(signupForm));
-    history.puch('/');
+    history.push('/');
   };
 
-  const {name, userName, password, bio, image} = signupForm;
+  const { name, userName, password, bio, image } = signupForm;
 
   return (
-    <form onSumbit={handleSubmit}>
+    <form onSubmit={ handleSubmit }>
+
       <input
         type='text'
         name='name'
-        value={name}
-        onChange={handleChange}
+        value={ name }
+        onChange={ handleChange }
         placeholder='Name'
       />
+
       <input
         type='text'
         name='userName'
-        value={userName}
-        onChange={handleChange}
+        value={ userName }
+        onChange={ handleChange }
         placeholder='Username'
       />
+
       <input
         type='password'
         name='password'
-        value={password}
-        onChange={handleChange}
+        value={ password }
+        onChange={ handleChange }
         placeholder='Password'
       />
+
       <input
         type='text'
         name='bio'
-        value={bio}
-        onChange={handleChange}
+        value={ bio }
+        onChange={ handleChange }
         placeholder='Bio'
       />
+
       <input
         type='text'
         name='image'
         value={image}
-        onChange={handleChange}
+        onChange={ handleChange }
         placeholder='Image URL'
       />
+
+    <input type='submit' />
+
     </form>
   )
 }

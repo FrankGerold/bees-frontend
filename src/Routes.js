@@ -1,10 +1,10 @@
 import React from 'react';
-import {Switch, Route} from ‘react-router-dom’;
+import { Switch, Route } from 'react-router-dom';
 import Pages from './Pages';
 
-const Routes = ({}) => (
+const Routes = () => (
   <Switch>
-    <Route path="/" component={Pages.Home} />
+    <Route path="/" exact component={Pages.Home} />
     <Route path="/signup" component={Pages.Signup} />
     <Route path="/login" component={Pages.Login} />
   </Switch>

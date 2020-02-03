@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Nav = ({}) => (
+const Nav = () => (
   <div>Navigation Bar</div>
 );
 

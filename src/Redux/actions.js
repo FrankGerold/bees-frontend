@@ -14,7 +14,7 @@ const newUser = user => dispatch => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(user)
+    body: JSON.stringify({user})
   };
   fetch(USERS_URL, config)
     .then(r=>r.json())
