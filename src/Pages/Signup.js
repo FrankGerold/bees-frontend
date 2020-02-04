@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import actions from '../Redux/userActions';
-import Nav from '../Components/Nav';
 
 const Signup = ({ history }) => {
 
