@@ -4,7 +4,7 @@ import actions from '../Redux/SpeciesActions';
 
 const AnimalDetail = ({ history }) => {
 
-
+  
 
 
   return ('bees lmao')
