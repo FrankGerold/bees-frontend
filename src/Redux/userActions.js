@@ -14,13 +14,13 @@ const newUser = user => dispatch => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({user})
+    body: JSON.stringify(user)
   };
   fetch(USERS_URL, config)
     .then(r=>r.json())
     .then(userInfo => {
       dispatch(setUserAction(userInfo.user));
-      localStorage.setItem('token', userInfo.token);
+      localStorage.setItem('token', userInfo.jwt);
     });
 };
 
@@ -47,7 +47,7 @@ const loginUser = user => dispatch => {
     .then(r => r.json())
     .then(userInfo => {
       dispatch(setUserAction(userInfo.user));
-      localStorage.setItem('token', userInfo.token);
+      localStorage.setItem('token', userInfo.jwt);
     });
 };
 
