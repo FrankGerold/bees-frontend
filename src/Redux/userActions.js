@@ -47,7 +47,7 @@ const loginUser = user => dispatch => {
   fetch(LOGIN_URL, config)
     .then(r => r.json())
     .then(userInfo => {
-      dispatch(setUserAction(userInfo.user));
+      dispatch(setUserAction(userInfo));
       localStorage.setItem('token', userInfo.jwt);
     });
 };

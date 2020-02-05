@@ -6,17 +6,23 @@ export default ({ history }) => {
 
   const dispatch = useDispatch();
 
-  const user = useSelector(state => state);
-
   useEffect(() => {
-    dispatch(actions.userProfile())    
-  })
+    dispatch(actions.userProfile())
+  }, [])
 
+  const userObj = useSelector(state => state)
+    // {if (state.user) {return state.user.data}})
 
-  // debugger
+  if (userObj.message) {
+    history.push('/')
+  }
+
+  console.log('user', userObj);
 
   return(
-    {user}
+    <div className='userProfile'>
+      <h1>hi</h1>
+    </div>
   )
 
 }
