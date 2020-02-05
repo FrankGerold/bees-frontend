@@ -1,8 +1,9 @@
 const URL = 'http://localhost:3000';
 const USERS_URL = URL + '/users';
-const PERSIST_URL = URL + '/auth';
+// const PERSIST_URL = URL + '/auth';
 const LOGIN_URL = URL + '/login';
 const USER_URL = id => USERS_URL + `/${id}`;
+const PROFILE_URL = URL + '/profile';
 
 const setUserAction = user => ({type: 'SET_USER', payload: user})
 
@@ -51,29 +52,47 @@ const loginUser = user => dispatch => {
     });
 };
 
-const persistUser = () => dispatch => {
-  const config = {
-    method: 'GET',
-    headers: {
-      Authorization: `bearer ${localStorage.token}`
-    }
-  };
-  fetch(PERSIST_URL, config)
-    .then(r => r.json())
-    .then(user => {
-      dispatch(setUserAction(user))
-    });
-};
+// const persistUser = () => dispatch => {
+//   const config = {
+//     method: 'GET',
+//     headers: {
+//       Authorization: `bearer ${localStorage.token}`
+//     }
+//   };
+//
+//   fetch(PERSIST_URL, config)
+//     .then(r => r.json())
+//     .then(user => {
+//       dispatch(setUserAction(user))
+//     });
+// };
 
 const logoutUser = () => dispatch => {
   dispatch(clearUserAction());
   localStorage.clear();
 };
 
+const userProfile = () => dispatch => {
+  const config = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `bearer ${localStorage.token}`
+    }
+  }
+
+  fetch(PROFILE_URL, config)
+    .then(r => r.json())
+    .then(user => {
+      dispatch(setUserAction(user))
+    })
+}
+
 export default {
   newUser,
   deleteUser,
   loginUser,
-  persistUser,
+  // persistUser,
+  userProfile,
   logoutUser
 }
