@@ -17,8 +17,8 @@ const Login = ({ history }) => {
 
   const handleSubmit = (submission) => {
     submission.preventDefault();
-    dispatch(actions.loginUser(loginForm));
-    history.push('/');
+    dispatch(actions.loginUser(loginForm))
+    history.push('/profile');
   };
 
   const {userName, password} = loginForm
