@@ -39,7 +39,7 @@ export default ({ history }) => {
         <h2>Quizzes:</h2>
         <h3>
           <ul>
-            <li>
+            <li>We out here</li>
           </ul>
         </h3>
       </div>
