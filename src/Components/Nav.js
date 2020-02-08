@@ -18,6 +18,7 @@ const Nav = () => {
       <Link to='/signup'>Sign Up</Link>
       <Link to='/login'>Log In</Link>
       <Link to='/profile'>Profile</Link>
+      <Link to ='/quiz'>New Quiz</Link>
       <Link to ='/' onClick={handleLogout}>Log Out</Link>
     </nav>
   );
