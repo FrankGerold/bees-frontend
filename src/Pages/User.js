@@ -1,34 +1,42 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import actions from '../Redux/userActions'
+import userActions from '../Redux/userActions'
+import quizActions from '../Redux/QuizActions'
 
 export default ({ history }) => {
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(actions.userProfile())
+    dispatch(userActions.userProfile())
+    dispatch(quizActions.getQuizzes())
   }, [])
 
+// Selector hook to grab redux state in user compionent
   const userObj = useSelector(state => state)
-    // {if (state.user) {return state.user.data}})
 
+// If the state contains an error message instead of the user object, throw the user back to the homepage to login
   useEffect(() => { if (userObj.message) {history.push('/')} }, [userObj])
 
-  console.log('user', userObj);
-
+// Set a userData variable that will contain user object info. This is a hack until i figure out how to properly deal with the async calls
   let userData = {attributes:''};
-  if (userObj.user){userData = userObj.user.data}
+  if (userObj.user) {
+    userData = userObj.user.data
+  };
 
-  console.log('data', userData)
+  let quizList = [];
+  if (userObj.quizzes) {
+    quizList = userObj.quizzes.data
+  };
 
-  const quizList = (quizObj) => {
-    for (let quiz in quizObj) {
+  const renderQuizzes = list => (
+    <ul className='quizList'>
+      {list.map( quiz => (<li>{quiz.attributes.name}, a quiz about {quiz.attributes.topic}. You scored {quiz.attributes.score ? quiz.attributes.score : 'NOTHING'}</li>))}
+    </ul>
+  )
 
-    }
-  }
-
-
+  // console.log();
+  // debugger
   return(
     <div className='userProfile'>
       <div className='bio'>
@@ -39,11 +47,10 @@ export default ({ history }) => {
         <h2>Quizzes:</h2>
         <h3>
           <ul>
-            <li>We out here</li>
+            {renderQuizzes(quizList)}
           </ul>
         </h3>
       </div>
     </div>
   )
-
 }
