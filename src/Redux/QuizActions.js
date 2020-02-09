@@ -51,7 +51,7 @@ const newQuiz = (quiz) => ({
 })
 
 // After quiz is done, patch db record with name and final score. Quizzes > Update rails route
-const finishedQuiz = (quiz) => {
+const finishedQuiz = quizUpdates => dispatch => {
   const config = {
     method: 'PATCH',
     headers: {
@@ -59,12 +59,12 @@ const finishedQuiz = (quiz) => {
       Authorization: `bearer ${localStorage.token}`
     },
     body: JSON.stringify({
-      name: quiz.attributes.name,
-      score: quiz.attributes.score
+      name: quizUpdates.name,
+      score: quizUpdates.score
     })
   }
 
-  fetch(`${QUIZZES_URL}/${quiz.id}`, config)
+  fetch(`${QUIZZES_URL}/${quizUpdates.id}`, config)
   .then(r=>r.json())
   .then(finishedQuiz => dispatch(newQuiz(finishedQuiz)))
 }
