@@ -10,7 +10,13 @@ export default (state = {}, { type, payload }) => {
     case 'SET_QUIZZES':
       return {
         ...state,
-        quizzes: payload
+        userQuizzes: payload
+      }
+
+    case 'NEW_QUIZ':
+      return {
+        ...state,
+        quiz: payload
       }
 
     default:

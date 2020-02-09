@@ -33,7 +33,7 @@ export default ({ history }) => {
   // if (userObj.quizzes) {
   //   quizList = userObj.quizzes.data
   // };
-  const quizList = useSelector(state=>{if(state.quizzes){return state.quizzes.data}})
+  const quizList = useSelector(state=>{if(state.userQuizzes){return state.userQuizzes.data}})
 
   const renderQuizzes = list => {if (list) return (
     <ul className='quizList'>
