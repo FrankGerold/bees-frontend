@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
-}
+/*
+1D381D drk grn
+747F56 medium grn
+B3BC8Blight green
+B2B0AE gray
+E4CFD6 pink
+ */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* E4CFD6
+DCAE62
+926DA1
+A2509B
+1D381D
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+#f44336*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html {
+  font-size: 1.5em;
+  color: #1D381D;
+  font-family: sans-serif;
+  /* background-image: url('./img/aaron-burden-6csuZQ9oZcI-unsplash.jpg');
+  backdrop-filter: blur(5px);
+  background-repeat: no-repeat; */
+  background-color: #E4CFD6;
+  background-size: 60%;
 }
