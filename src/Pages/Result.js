@@ -39,13 +39,14 @@ export default ({history}) => {
   const handleSubmit = () => {
 
     let newName = quizUpdate.name;
-    if (!newName) {
-      newName=
-    }
     let newScore = quizUpdate.score;
 
 
-    dispatch(quizActions.finishedQuiz(quizUpdate.name, quizUpdate.score, quizId))
+    if (newName === "") {
+      newName = `Quiz ${quizId}`
+    }
+    
+    dispatch(quizActions.finishedQuiz(newName, newScore, quizId))
 
     history.push('/')
   }
