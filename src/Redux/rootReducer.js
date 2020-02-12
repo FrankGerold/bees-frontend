@@ -19,6 +19,12 @@ export default (state = {}, { type, payload }) => {
         quiz: payload
       }
 
+    case 'QUIZ_RESULT':
+      return {
+        ...state,
+        quizResult: payload
+      }
+
     default:
       return state;
   }

@@ -3,7 +3,7 @@ const QUIZZES_URL = 'http://localhost:3000/quizzes'
 const USER_QUIZZES = 'http://localhost:3000/userquizzes'
 
 // Action to create a quiz for the current logged in user. Uses the Quiz Create route on rails api backend
-const createQuiz = (topic, quizName) => dispatch => {
+const createQuiz = (topic='bees') => dispatch => {
   const config = {
     method:'POST',
     headers: {
@@ -13,7 +13,6 @@ const createQuiz = (topic, quizName) => dispatch => {
     body: JSON.stringify(
       {
         topic: topic,
-        name:quizName
       }
     )
   }
@@ -51,7 +50,7 @@ const newQuiz = (quiz) => ({
 })
 
 // After quiz is done, patch db record with name and final score. Quizzes > Update rails route
-const finishedQuiz = quizUpdates => dispatch => {
+const finishedQuiz = (newName, newScore, id) => dispatch => {
   const config = {
     method: 'PATCH',
     headers: {
@@ -59,20 +58,28 @@ const finishedQuiz = quizUpdates => dispatch => {
       Authorization: `bearer ${localStorage.token}`
     },
     body: JSON.stringify({
-      name: quizUpdates.name,
-      score: quizUpdates.score
+      name: newName,
+      score: newScore
     })
   }
 
-  fetch(`${QUIZZES_URL}/${quizUpdates.id}`, config)
+  fetch(`${QUIZZES_URL}/${id}`, config)
   .then(r=>r.json())
-  .then(finishedQuiz => dispatch(newQuiz(finishedQuiz)))
+  .then(finishedQuiz => {
+    console.log(finishedQuiz);
+     return dispatch(newQuiz(finishedQuiz))})
 }
+
+const quizResult = (resultObj) => ({
+  type: 'QUIZ_RESULT',
+  payload: resultObj
+})
 
 export default {
   createQuiz,
   getQuizzes,
   setQuizzes,
   newQuiz,
-  finishedQuiz
+  finishedQuiz,
+  quizResult
 }

@@ -37,7 +37,7 @@ export default ({ history }) => {
 
   const renderQuizzes = list => {if (list) return (
     <ul className='quizList'>
-      {list.map( quiz => (<li key={quiz.id}>{quiz.attributes.name}, a quiz about {quiz.attributes.topic}. You scored {quiz.attributes.score ? quiz.attributes.score : 'NOTHING'}</li>))}
+      {list.map( quiz => (<li key={quiz.id}>{quiz.attributes.name}, a quiz about {quiz.attributes.topic}. You scored {quiz.attributes.score ? `${quiz.attributes.score}%` : 'NOTHING'}</li>))}
     </ul>
   )}
 
