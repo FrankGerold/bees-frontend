@@ -44,7 +44,7 @@ const setQuizzes = quizzes => ({
 })
 
 // action to save a newly creted list to state
-const newQuiz = (quiz) => ({
+const newQuiz = quiz => ({
   type: 'NEW_QUIZ',
   payload: quiz
 })

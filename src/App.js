@@ -9,7 +9,7 @@ import {BrowserRouter} from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
+      <Nav className='nav' />
       <Routes />
     </BrowserRouter>
   );

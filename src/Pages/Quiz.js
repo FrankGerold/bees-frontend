@@ -17,7 +17,7 @@ export default ({ history }) => {
   }, []);
 
   // If the state contains an error message instead of the user object, throw the user back to the homepage to login
-    const errorMessage = useSelector(s=>{if(s.message){return s.message}});
+    const errorMessage = useSelector(s=>{if(s.quiz){return s.quiz.message}});
 
     useEffect(() => { if (errorMessage) {history.push('/')} }, [errorMessage]);
 

@@ -60,15 +60,18 @@ export default ({history}) => {
       <div className='resultArea'>
       <h2>Quiz Complete!</h2>
       <h2>You scored {percentScore}%!</h2>
-        <h2><label >Name Your Quiz?</label>
-          <input type='text' name='name' onChange={handleChange} value={name} placeholder='Quiz Name' />
-          <input type='submit' value='Submit' onClick={handleSubmit} />
+        <h2 className='nameQuizLabel'><label>Name Your Quiz?</label>
+          <input className='textInput' type='text' name='name' onChange={handleChange} value={name} placeholder='Quiz Name'  />
+          <input className='submitButton' type='submit' value='Submit' onClick={handleSubmit} />
         </h2>
       </div>
     )
   }
 
   return (
-    <div>{renderResults()}</div>
+    <div className='resultContainer'>
+      <div className='resultBg'></div>
+      {renderResults()}
+    </div>
   )
 }

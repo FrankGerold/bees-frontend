@@ -43,7 +43,7 @@ return (
   </div>
 
 
-        <h2 className='quizbutton'><Link onClick={()=>{console.log(props)}} to='/quiz'>Take Quiz!</Link></h2>
+        <h2 className='quizbutton'><Link to='/quiz'>Take Quiz!</Link></h2>
 
   </div>
 )};

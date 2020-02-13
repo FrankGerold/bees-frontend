@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import actions from '../Redux/userActions'
 
+import '../CSS/nav.css'
+
 const Nav = () => {
 
   const dispatch = useDispatch();
