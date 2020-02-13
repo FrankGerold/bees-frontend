@@ -1,0 +1,63 @@
+html {
+  overflow: hidden;
+}
+
+.home {
+  height: 100vh;
+  perspective: 2px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.parallax::before {
+  content:"";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("../img/aaron-burden-6csuZQ9oZcI-unsplash.jpg");
+  position: absolute;
+  opacity: 0.65;
+  z-index: 1;
+  transform: translateZ(1px) scale(1);
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-size: cover;
+}
+
+.regular {
+  width: 100vw;
+  height: 50vh;
+  padding-top: 20vh;
+  position: relative;
+  z-index: 2;
+  background-image: url("../img/eric-ward-qFAEHxevxVE-unsplash.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+
+}
+
+.quizbutton{
+  perspective: 2px;
+}
+
+.errorSpan{
+  perspective: 2px;
+}

@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import userActions from '../Redux/userActions'
 import quizActions from '../Redux/QuizActions'
 
+import '../CSS/quiz.css'
+
 
 export default ({ history }) => {
 
