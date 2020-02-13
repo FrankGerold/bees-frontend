@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import actions from '../Redux/userActions';
 
+import '../CSS/signup.css'
+
 const Signup = ({ history }) => {
 
   const dispatch = useDispatch();
@@ -31,10 +33,11 @@ const Signup = ({ history }) => {
 
   return (
     <div className='signupField'>
-      <form onSubmit={ handleSubmit }>
+      <div className='signupBg'></div>
+      <form className='signupForm' onSubmit={ handleSubmit }>
         <h1>Sign Up!</h1>
         <br />
-        <input
+        <input className='textFields'
           type='text'
           name='name'
           value={ name }
@@ -42,7 +45,7 @@ const Signup = ({ history }) => {
           placeholder='Name'
         />
       <br />
-        <input
+        <input className='textFields'
           type='text'
           name='userName'
           value={ userName }
@@ -50,7 +53,7 @@ const Signup = ({ history }) => {
           placeholder='Username'
         />
       <br />
-        <input
+        <input className='textFields'
           type='password'
           name='password'
           value={ password }
@@ -58,7 +61,7 @@ const Signup = ({ history }) => {
           placeholder='Password'
         />
       <br />
-        <input
+        <input className='textFields'
           type='text'
           name='bio'
           value={ bio }
@@ -66,7 +69,7 @@ const Signup = ({ history }) => {
           placeholder='Bio'
         />
       <br />
-        <input
+        <input className='textFields'
           type='text'
           name='image'
           value={image}
@@ -74,7 +77,7 @@ const Signup = ({ history }) => {
           placeholder='Image URL'
         />
       <br />
-      <input type='submit' />
+      <input className='submit' type='submit' value='Sign Up' />
     </form>
   </div>
   )

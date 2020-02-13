@@ -1,19 +1,17 @@
-.resultContainer {
-      opacity: 1;
-      z-index: 1;
-      overflow-y: hidden;
+.bio {
+
 }
 
-.resultBg {
+.profileBg {
   display: block;
   content: "";
-  background-image: url("../img/jason-leung-Qgb9urMZ8lw-unsplash.jpg");
+  background-image: url("../img/kai-wenzel-dyGWrmJ_i4E-unsplash.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 90vw;
+  height: 100vw;
   /* opacity: .6; */
   z-index: 0;
   /* margin: -100vw; */
@@ -21,7 +19,7 @@
   opacity: 0.9;
 }
 
-.resultArea {
+.userProfile {
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
@@ -33,9 +31,9 @@
   border-radius: 16px;
 
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 20%;
+  /* transform: translate(-50%, -50%); */
 
   font-size: 1.5em;
   border: 0 #1D381D;
@@ -43,20 +41,9 @@
   margin: auto;
   padding: 1.5rem;
   overflow-y: scroll;
-  background: rgba(228, 207, 214, .8)
+  background: rgba(228, 207, 214, .7)
 }
 
+.userQuizzes {
 
-.textInput {
-  padding: .3rem;
-  box-sizing: border-box;
-  font-size: 1.5em;
-  max-width: 60%;
-  border-radius: 16px;
-  margin-top: .3em;
-  margin-left: .4rem;
-}
-
-.nameQuizLabel {
-  margin-top: 1rem;
 }

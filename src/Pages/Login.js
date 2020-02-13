@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import actions from '../Redux/userActions';
 
-
+import '../CSS/login.css'
 
 const Login = ({ history }) => {
 
@@ -25,11 +25,12 @@ const Login = ({ history }) => {
 
   return (
     <div className='loginField'>
-      <form onSubmit={handleSubmit}>
+      <div className='loginBg'></div>
+      <form className='loginForm' onSubmit={handleSubmit}>
 
         <h1>Login</h1>
 
-        <input
+        <input  className='textFields'
           type='text'
           name='userName'
           value={userName}
@@ -39,7 +40,7 @@ const Login = ({ history }) => {
 
         <br />
 
-        <input
+        <input className='textFields'
           type='password'
           name='password'
           value={password}
@@ -49,7 +50,7 @@ const Login = ({ history }) => {
 
         <br />
 
-        <input type='submit' />
+        <input type='submit' className='submit' />
 
       </form>
 

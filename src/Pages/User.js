@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import userActions from '../Redux/userActions'
 import quizActions from '../Redux/QuizActions'
 
+import '../CSS/profile.css'
+
 export default ({ history }) => {
 
   const dispatch = useDispatch();
@@ -49,6 +51,8 @@ export default ({ history }) => {
   )}
 
   return(
+    <div>
+      <div className='profileBg'></div>
     <div className='userProfile'>
       {renderBio(userData)}
       <div className='userQuizzes'>
@@ -60,5 +64,6 @@ export default ({ history }) => {
         </h3>
       </div>
     </div>
+  </div>
   )
 }
