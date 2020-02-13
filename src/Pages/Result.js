@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import userActions from '../Redux/userActions'
 import quizActions from '../Redux/QuizActions'
 
+import '../CSS/result.css'
+
 
 export default ({history}) => {
   const dispatch = useDispatch();
@@ -45,7 +47,7 @@ export default ({history}) => {
     if (newName === "") {
       newName = `Quiz ${quizId}`
     }
-    
+
     dispatch(quizActions.finishedQuiz(newName, newScore, quizId))
 
     history.push('/')

@@ -10,12 +10,10 @@ const error = useSelector( s => {if (s.message){return s.message}})
 return (
   <div className='home'>
     <h1>Home</h1>
-    <span className='errorSpan'>{error}</span>
 
   <div className='parallax'>
-    <div className='content'>
-      <p className='firstP homepageText'>Sed posuere neque sed tortor luctus pharetra. Nullam in nisl metus. Donec ac ante lobortis, sagittis mauris eu, pulvinar leo. Morbi lacinia posuere quam, in bibendum augue lacinia id. Sed molestie ante lorem, sollicitudin facilisis urna tristique quis. Aliquam interdum consequat ante at suscipit. Donec vitae mi quis nisl ultrices tempor vel vitae lorem. In vitae eros eros. .</p>
-    </div>
+    <span className='errorSpan'>{error}</span>
+    <p className='firstP homepageText logo'>Bees</p>
   </div>
 
   <div className='regular'>

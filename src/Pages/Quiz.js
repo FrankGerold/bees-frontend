@@ -16,6 +16,11 @@ export default ({ history }) => {
     dispatch(quizActions.createQuiz());
   }, []);
 
+  // If the state contains an error message instead of the user object, throw the user back to the homepage to login
+    const errorMessage = useSelector(s=>{if(s.message){return s.message}});
+
+    useEffect(() => { if (errorMessage) {history.push('/')} }, [errorMessage]);
+
 // State variables for setting quiz name and score
   const [quizName, setQuizName] = useState('');
   const [score, setScore] = useState({
@@ -42,7 +47,7 @@ export default ({ history }) => {
 
 
       return (
-        <div>
+        <div className='questionRender'>
           <p className='question'>{currentQuestion}</p>
           <span className='result'>{answerResult}</span>
           <p className='fullAnswer'>{answerResult?currentAnswer:''}</p>
@@ -56,7 +61,7 @@ export default ({ history }) => {
   const renderAnswers = (answers) => {
     return (
       <ul className='answers'>
-        {answers.map(ans => <li key={ans.id} onClick={()=>answerChoice(ans)}>{ans.text}</li>)}
+        {answers.map(ans => <li className='answer' key={ans.id} onClick={()=>answerChoice(ans)}>{ans.text}</li>)}
       </ul>
     )
   }
@@ -104,8 +109,9 @@ export default ({ history }) => {
   }
 
   return (
-    <div>
-      <div>{renderQuestion(score.question)}</div>
+    <div className='quiz'>
+      <div className='quizQuestion'>{renderQuestion(score.question)}</div>
+      <div className='quizBg'></div>
     </div>
   )
 }
