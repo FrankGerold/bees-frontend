@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import userActions from '../Redux/userActions'
 import quizActions from '../Redux/QuizActions'
 
+import '../CSS/profile.css'
+
 export default ({ history }) => {
 
   const dispatch = useDispatch();
@@ -37,7 +39,7 @@ export default ({ history }) => {
 
   const renderQuizzes = list => {if (list) return (
     <ul className='quizList'>
-      {list.map( quiz => (<li key={quiz.id}>{quiz.attributes.name}, a quiz about {quiz.attributes.topic}. You scored {quiz.attributes.score ? quiz.attributes.score : 'NOTHING'}</li>))}
+      {list.map( quiz => (<li key={quiz.id}>{quiz.attributes.name}, a quiz about {quiz.attributes.topic}. You scored {quiz.attributes.score ? `${quiz.attributes.score}%` : 'NOTHING'}</li>))}
     </ul>
   )}
 
@@ -49,6 +51,8 @@ export default ({ history }) => {
   )}
 
   return(
+    <div>
+      <div className='profileBg'></div>
     <div className='userProfile'>
       {renderBio(userData)}
       <div className='userQuizzes'>
@@ -60,5 +64,6 @@ export default ({ history }) => {
         </h3>
       </div>
     </div>
+  </div>
   )
 }

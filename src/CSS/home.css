@@ -1,0 +1,105 @@
+/* html {
+  overflow: hidden;
+} */
+
+.home {
+  height: 100vh;
+  perspective: 2px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-weight: bold;
+}
+
+.parallax {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  text-align: center;
+}
+
+.parallax::before {
+  content:"";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("../img/aaron-burden-6csuZQ9oZcI-unsplash.jpg");
+  position: absolute;
+  /* opacity: 0.7; */
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.regular {
+  width: 100vw;
+  height: 80vh;
+  padding-top: 20vh;
+  position: relative;
+  /* opacity: 0.7; */
+  z-index: 2;
+  background-image: url("../img/eric-ward-qFAEHxevxVE-unsplash.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  z-index: 2;
+  perspective: 2px;
+  margin: 0 auto;
+  padding: .2rem;
+  width: 50%;
+  opacity: 100;
+  font-size: 1.5rem;
+
+    border-radius: 16px;
+
+    background: rgba(228, 207, 214, .5)
+}
+
+.quizbutton{
+  perspective: 2px;
+  border: .1em;
+  /* border-color:  #df638d; */
+  /* border-style: ridge; */
+  background-color: rgba(223, 99, 141, .7);
+  margin: .5em;
+  padding: .2em;
+  font-size: 1em;
+  position: absolute;
+  display: inline-block;
+  border-radius: 11px;
+  font-size: 5rem;
+  left: 40%;
+  transform: translateX(-40%);
+
+  color: #1D381D;
+}
+
+span:empty {
+  display:none;
+}
+.errorSpan {
+  z-index: 2;
+  perspective: 2px;
+  font-size: 3rem;
+  background: rgba(228, 207, 214, .7);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.logo {
+  margin-top: 0rem;
+  background: hidden;
+  font-size: 15rem;
+  color: #FFD051;
+  text-shadow: 10px 10px 10px 10px #8B6B07;
+}

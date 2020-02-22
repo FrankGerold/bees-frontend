@@ -1,0 +1,13 @@
+#navBar {
+  font-size: 1rem;
+  font-weight: bold;
+  background: #657247;
+  /* rgba(228, 207, 214, .7); */
+
+}
+#navBar > * {
+  margin-right: 1.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: .1rem;
+  text-decoration: none;
+}
