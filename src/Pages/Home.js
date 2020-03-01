@@ -18,13 +18,13 @@ return (
 
   <div className='regular'>
     <div className='content'>
-      <p className='secondP homepageText'>Sed magna erat, convallis ac ultricies sed, congue eu turpis. Pellentesque consectetur vehicula accumsan. Vestibulum tincidunt laoreet suscipit. Suspendisse mollis mauris sit amet tellus suscipit porttitor. Donec fermentum efficitur ante eget eleifend. Praesent id urna pellentesque felis viverra blandit id pretium dolor. Praesent nisi ex, pharetra nec vulputate ac, auctor eget mi.</p>
+      <p className='secondP homepageText'>Do you love bees? Of course you do! Everyone loves bees. They are our favorite cute little flying friend. Do you like honey? How about flowers? Fruits and vegetables? If you said 'Yes' to any one of these things, then you have bees to thank. This app is dedicated to all the lovely bees around the world. </p>
     </div>
   </div>
 
   <div className='parallax'>
     <div className='content'>
-      <p className='thirdP homepageText'>Maecenas elementum mattis ultricies. Nullam convallis velit a est congue accumsan. Integer id arcu vitae nibh facilisis rhoncus. Praesent aliquam tristique augue quis lacinia. Phasellus vel rutrum diam. Nulla feugiat ultricies erat a aliquet. Nullam eget posuere mauris. Suspendisse ac elementum odio. Cras at egestas quam. Phasellus ultrices eros non gravida mollis. Donec ac nunc vulputate, iaculis quam eget, lacinia urna. Sed dapibus laoreet sem, id finibus nisl dignissim finibus. Donec a urna dui. Praesent dolor nunc, pharetra nec luctus ac, interdum a libero. Integer euismod porttitor elementum.</p>
+      <p className='thirdP homepageText'>Honey bees are responsible for almost 80% of all pollination that occurs worldwide. Most of the flowering plants you know and love require bees to help them propagate! This includes over 75% of all crops that are cultivated and eaten by humans - more than 90% of global human nutrition! Humans absolutely need bees to survive.</p>
     </div>
   </div>
 
@@ -32,15 +32,21 @@ return (
 
 <div className='regular'>
   <div className='content'>
-      <p className='fourthP homepageText'>Donec in viverra dui. Praesent interdum ullamcorper rhoncus. Mauris ut dictum felis. Fusce consequat tellus vulputate, fringilla tellus at, dapibus ipsum. Aenean velit purus, hendrerit eget velit eget, accumsan scelerisque elit. Ut iaculis mollis arcu, vel eleifend dui elementum nec. Phasellus non hendrerit ipsum. Nulla quis pellentesque enim, non consectetur mi. Curabitur bibendum, massa sit amet sollicitudin fringilla, elit tortor tempus magna, at gravida erat purus ac nisl. Mauris sagittis ac nunc at fringilla. Nunc et rhoncus justo. Nam ut gravida risus, ut rhoncus arcu. Cras urna nisi, ultrices ac sollicitudin in, laoreet finibus risus.</p>
+      <p className='fourthP homepageText'>But wait! Bees are in trouble! Every year, a huge chunk of existing beehives dies out - roughly 30% of ALL hives annually - in a phenomenon known as Colony Collapse Disorder. If serious measures are not taken to curb this decline, then the vast majority of food worldwide AND our friends the bees will continue to be at risk!</p>
     </div>
   </div>
 
   <div className='parallax'>
     <div className='content'>
-      <p className='fifthP homepageText'>Fusce bibendum enim sed justo varius ultrices. Nam tincidunt, tortor id tristique ultrices, tortor quam consectetur velit, at tempor leo leo ac turpis. Praesent sagittis massa eget nisl vehicula, eu bibendum nulla porta. Etiam condimentum dolor nec luctus tincidunt. Integer id blandit nisi. Nam sit amet congue leo. Donec vel pellentesque arcu. Aenean pulvinar erat nec condimentum egestas. </p>
+      <p className='fifthP homepageText'>What could be killing so many billions of bees each year? A combination of factors: habitat destruction, pesticides, disease, parasites, and poor nutrition. All of which are symptomatic of unchecked corporate greed and destructive farming practices. The massive global farming and chemical industries have placed profit over sustainability for the past century and completely destroyed the stable natural ecology that bees require in order to survive.</p>
     </div>
   </div>
+
+  <div className='regular'>
+    <div className='content'>
+        <p className='fourthP homepageText'>How can we stop this from happening and save the bees? By preserving natural wild habitats, restoring sustainable ecological agricultural practices, and banning the most destructive pesticides and fertilizers, we can begin to preserve the remaining bee populations. Vote for candadates, locally and nationally, who have strong environmental policies. Buy products that support environmental organizations. Grow bee and other pollinator friendly plants in your garden. All of these things can help save our friends.</p>
+      </div>
+    </div>
 
 
         <h2 className='quizbutton'><Link to='/quiz'>Take Quiz!</Link></h2>
