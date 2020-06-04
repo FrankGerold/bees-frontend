@@ -18,4 +18,4 @@ In order for the app to have full functionality, the back-end server should be r
 All that is required for the frontend is an installation of NodeJS (8.1+) and a package manager such as NPM (5.2+) or Yarn.
 
 From the base bees-frontend directory in your shell of choice, run a simple `npm install`, followed by `yarn start` (there may be  port conflict with Rails if the backend is already running, in which case you can just say `Yes` at the alert screen to pick the next port option.)
-The app should now be running in your browser at [localhost:3001](localhost:3001) or whichever port it tells you!
+The app should now be running in your browser at [localhost:3001](localhost:3001) or whichever port it tells you! Have fun!
