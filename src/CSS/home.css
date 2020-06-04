@@ -59,10 +59,12 @@
   width: 50%;
   opacity: 100;
   font-size: 1.5rem;
+  border-radius: 16px;
+  background: rgba(228, 207, 214, .5);
+}
 
-    border-radius: 16px;
-
-    background: rgba(228, 207, 214, .5)
+p {
+  margin: 1.5rem;
 }
 
 .quizbutton{
