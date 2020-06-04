@@ -4,6 +4,7 @@
 
 ### Features
 * Dynamic single-page web application.
+* Provides valuable information about entomology, biology, ecology, and wildlife conservation, in the form of easy to digest fun facts.
 * Randomly generates quizzes for users to attempt and saves their scores.
 * ReactJS front end for intuitive UI.
 * Redux & Thunk for centralized state control.
