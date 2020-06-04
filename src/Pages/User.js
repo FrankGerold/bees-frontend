@@ -56,7 +56,7 @@ export default ({ history }) => {
     <div className='userProfile'>
       {renderBio(userData)}
       <div className='userQuizzes'>
-        <h2>Quizzes:</h2>
+        <h2>High Scores:</h2>
         <h3>
           <ul>
             {renderQuizzes(quizList)}
