@@ -10,7 +10,6 @@
 * Ruby on Rails back end with PostgreSQL database for managing user data.
 * BCrypt and JWT using Elliptic-Curve Cryptography for auth
 
-
 ### [Back-End Repo Here](https://github.com/FrankGerold/bees-backend "Bees Back-End")
 
 ### Installation
