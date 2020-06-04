@@ -2,7 +2,7 @@
 
 ## A quick, fun and easy quiz app for learning about bees and wildlife conservation.
 
-###Features
+### Features
 * Dynamic single-page web application.
 * Randomly generates quizzes for users to attempt and saves their scores.
 * ReactJS front end for intuitive UI.
