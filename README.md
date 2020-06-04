@@ -6,15 +6,17 @@
 * Dynamic single-page web application.
 * Randomly generates quizzes for users to attempt and saves their scores.
 * ReactJS front end for intuitive UI.
-* Redux for centralized state control.
+* Redux & Thunk for centralized state control.
 * Ruby on Rails back end with PostgreSQL database for managing user data.
+* BCrypt and JWT using Elliptic-Curve Cryptography for auth
 
 
-### [Back End Repo Here](https://github.com/FrankGerold/bees-backend "Bees Back-End")
+### [Back-End Repo Here](https://github.com/FrankGerold/bees-backend "Bees Back-End")
 
 ### Installation
 In order for the app to have full functionality, the back-end server should be running already. (Details in the repo listed above.)
 
-All that is required for the frontend is an installation of NodeJS and a package manager such as NPM or Yarn.
+All that is required for the frontend is an installation of NodeJS (8.1+) and a package manager such as NPM (5.2+) or Yarn.
 
-From the base bees-frontend directory in your shell of choice, run a simple `npm install`, followed by `yarn start` and the app should be running in your browser at [localhost:3000](localhost:3000) or whichever port it tells you!
+From the base bees-frontend directory in your shell of choice, run a simple `npm install`, followed by `yarn start` (there may be  port conflict with Rails if the backend is already running, in which case you can just say `Yes` at the alert screen to pick the next port option.)
+The app should now be running in your browser at [localhost:3001](localhost:3001) or whichever port it tells you!
