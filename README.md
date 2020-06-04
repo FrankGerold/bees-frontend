@@ -13,7 +13,7 @@
 ### [Back End Repo Here](https://github.com/FrankGerold/bees-backend "Bees Back-End")
 
 ### Installation
-In order for the app to have full functionality, a Postgres DB should be running on the local machine, and the back end server should be running as well. (Details in the repo listed above.)
+In order for the app to have full functionality, the back-end server should be running already. (Details in the repo listed above.)
 
 All that is required for the frontend is an installation of NodeJS and a package manager such as NPM or Yarn.
 
